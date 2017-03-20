@@ -5,7 +5,7 @@ This program will work with spreadsheet and database formats. The program will b
 
 Tools that will be used for this project include Google's TensorFlow (https://www.tensorflow.org/) library for machine intelligence. TensorFlow has the
 ability to perform contextual text analysis (https://research.googleblog.com/2016/08/text-summarization-with-tensorflow.html)
-Other tools will perform image creation, such as the cluster analysis, and other, simpler things, like word clouds.
+Other tools will perform image creation, such as the cluster analysis, and other, simpler things, like word clouds. Topic modeling will be performed by Mallet (http://mallet.cs.umass.edu/index.php).
 
 General process flow will be:
 
