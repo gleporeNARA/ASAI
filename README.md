@@ -5,7 +5,7 @@ The current project will work with spreadsheet and database formats. The program
 
 Tools that will be used for this project include Google's TensorFlow (https://www.tensorflow.org/) library for machine intelligence. TensorFlow has the
 ability to perform contextual text analysis (https://research.googleblog.com/2016/08/text-summarization-with-tensorflow.html)
-Other tools will perform image creation, such as the cluster analysis I mentioned above, and other, simpler things, like word clouds.
+Other tools will perform image creation, such as the cluster analysis, and other, simpler things, like word clouds.
 
 General process flow will be:
 
