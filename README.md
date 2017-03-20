@@ -2,7 +2,7 @@
 Analyzing Spreadsheets with Artificial Intelligence
 
 The current project will work with spreadsheet and database
-formats. The program would be written in Java and would use Apache
+formats. The program will be written in Java and would use Apache
 Tika (https://tika.apache.org/) to identify and analyze all
 spreadsheet files (xls, xlsx, ods, csv, and a few other formats) in a
 collection. The program would use metadata such as the title of the
