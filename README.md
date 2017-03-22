@@ -11,7 +11,9 @@ TensorFlow (https://www.tensorflow.org/) - library for machine intelligence. Ten
 
 Mallet (http://mallet.cs.umass.edu/) - "is a Java-based package for statistical natural language processing, document classification, clustering, topic modeling, information extraction, and other machine learning applications to text."
 
-Other tools (TBD) will perform image creation, such as the cluster analysis, and other, simpler things, like word clouds. 
+D3.ja (https://d3js.org/) - to create data visualizations for the HTML results page, including Word Clouds and other images.
+
+Other tools (TBD) will be used to create in-depth results analysis, including time lines and cluster analysis. 
 
 General process flow will be:
 
