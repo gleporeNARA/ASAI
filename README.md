@@ -13,6 +13,8 @@ Mallet (http://mallet.cs.umass.edu/) - "is a Java-based package for statistical 
 
 D3.ja (https://d3js.org/) - to create data visualizations for the HTML results page, including word clouds, bubble charts and other images.
 
+Carrot2 (http://project.carrot2.org/) - to create interactive document clusters.
+
 Other tools (TBD) will be used to create in-depth results analysis, including time lines and cluster analysis. 
 
 General process flow will be:
