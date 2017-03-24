@@ -1,0 +1,352 @@
+Accidents|mishap|misadventure|mischance|happening|occurrence|occurrent|natural event 
+Accountants|businessperson|bourgeois 
+Accounting|explanation|account|system|system of rules|occupation|business|job|line of work|line|register|statement|financial statement 
+Additives|addition|add-on|improver 
+Adhesives|material|stuff 
+Advertising|promotion|publicity|promotional material|packaging|commercial enterprise|business enterprise|business 
+Aged|age group|age bracket|cohort 
+Agriculture|commercial enterprise|business enterprise|business|cultivation|executive department|class|stratum|social class|socio-economic class 
+Airlines|hose|hosepipe|line 
+Airmen|skilled worker|trained worker|skilled workman 
+Airports|airfield|landing field|flying field|field 
+Airspace|space|atmosphere|air 
+Airways|duct|path|route|itinerary|tract|line 
+Alaska|American state 
+Alcoholism|drug addiction|white plague|mania|passion|cacoethes 
+Aliens|traveler|traveller|intruder|interloper|trespasser|hypothetical creature 
+Aluminum|metallic element|metal 
+Ammunition|weaponry|arms|implements of war|weapons system|munition|material|stuff|information|info 
+Animals|organism|being 
+Antennas|electrical device|sensitivity|sensitiveness|tentacle 
+Antibiotics|antibacterial|antibacterial drug|bactericide 
+Antiquities|historic period|age|oldness|artifact|artefact 
+Appliances|device|durables|durable goods|consumer durables 
+Arson|burning|combustion 
+Asylum|shelter|hospital|infirmary 
+Attorneys|professional|professional person 
+Automobiles|motor vehicle|automotive vehicle 
+Awards|grant|subsidization|subsidisation|symbol|gift 
+Baggage|case|woman|adult female|materiel|equipage 
+Balloons|lighter-than-air craft|plaything|toy 
+Bankruptcy|failure|insolvency|proceeding|legal proceeding|proceedings 
+Beaches|geological formation|formation 
+Beef|cattle|cows|kine|oxen|Bos taurus|meat|objection 
+Beer|brew|brewage 
+Bees|hymenopterous insect|hymenopteran|hymenopteron|hymenopter|social gathering|social affair 
+Beryllium|metallic element|metal 
+Beverages|food|nutrient|liquid 
+Birds|vertebrate|craniate|meat|girl|miss|missy|young lady|young woman|fille|cry|outcry|call|yell|shout|vociferation|badminton equipment 
+Blind|people|screen|cover|covert|concealment|protective covering|protective cover|protection|misrepresentation|deceit|deception 
+Blood|liquid body substance|bodily fluid|body fluid|humor|humour|disposition|temperament|libertine|debauchee|rounder|genealogy|family tree|people 
+Bonding|personal relation|personal relationship|technique|fastening|attachment 
+Bonds|attraction|attractive force|debt instrument|obligation|certificate of indebtedness|security|certificate|connection|connexion|connectedness|recognizance|recognisance|restraint|constraint|connection|connexion|connector|connecter|connective|writing paper 
+Borders|boundary|bound|bounds|boundary|edge|bound|boundary|bound|bounds|edge|edge 
+Boycotts|protest|objection|dissent 
+Bread|baked goods|starches|money 
+Bridges|labor leader|structure|construction|circuit|electrical circuit|electric circuit|connection|connexion|connectedness|structure|anatomical structure|complex body part|bodily structure|body structure|card game|cards|support|denture|dental plate|plate|link|linkup|tie|tie-in|upper deck 
+Brokers|businessperson|bourgeois 
+Buses|public transport|topology|network topology|conductor|car|auto|automobile|machine|motorcar|dysphemism 
+Cancer|malignant tumor|malignant neoplasm|metastatic tumor|person|individual|someone|somebody|mortal|soul
+Capital|assets|assets|seat|character|grapheme|graphic symbol|center|centre
+Cargo|merchandise|ware|product 
+Cemeteries|site|land site 
+Chaplains|clergyman|reverend|man of the cloth 
+Checks|draft|bill of exchange|order of payment|appraisal|assessment|bill|account|invoice|inaction|inactivity|inactiveness|proof|cogent evidence|inspection|review|mark|difficulty|blemish|defect|mar|weave|restraint|obstruction|chess move 
+Cheese|dairy product|food|solid food|mallow 
+Chemicals|material|stuff 
+Children|juvenile|juvenile person|offspring|progeny|issue|person|individual|someone|somebody|mortal|soul|descendant|descendent 
+Claims|assertion|averment|asseveration|assertion|averment|asseveration|demand|right|legal right|demand 
+Clemency|good weather|lenience|leniency 
+Clothing|covering|consumer goods 
+Coal|fossil fuel|vegetable matter|fragment 
+Coffee|beverage|drink|drinkable|potable|tree|seed|brown|brownness 
+Coins|coinage|mintage|specie|metal money 
+Committees|administrative unit|administrative body|nongovernmental organization|NGO 
+Commodities|artifact|artefact 
+Communications|discipline|subject|subject area|subject field|field|field of study|study|bailiwick|act|deed|human action|human activity|abstraction|abstract entity|connection|connexion|connectedness 
+Compensation|recompense|defense mechanism|defense reaction|defence mechanism|defence reaction|defense|defence|correction|rectification 
+Concessions|contract|assent|acquiescence|agreement 
+Condominiums|dwelling|home|domicile|abode|habitation|dwelling house|housing|lodging|living accommodations 
+Conservation|improvement|betterment|advance|preservation|saving|principle 
+Containers|instrumentality|instrumentation 
+Contracts|written agreement|bid|bidding|bridge 
+Cooperatives|commercial enterprise|association 
+Copper|metallic element|metal|conductor|penny|cent|centime|policeman|police officer|officer|reddish brown|sepia|burnt sienna|Venetian red|mahogany|lycaenid|lycaenid butterfly 
+Copyright|document|written document|papers|legal right 
+Corporations|firm|house|business firm|belly|paunch 
+Cosmetics|toiletry|toilet articles 
+Cotton|plant fiber|plant fibre|fabric|cloth|material|textile|shrub|bush|thread|yarn 
+Cottonseeds|oilseed|oil-rich seed 
+Courts|assembly|room|government|authorities|regime|playing field|athletic field|playing area|field
+Crafts|occupation|business|job|line of work|line|vehicle|class|stratum|social class|socio-economic class|skill|accomplishment|acquirement|acquisition|attainment|shrewdness|astuteness|perspicacity|perspicaciousness 
+Credit|approval|commendation|assets|entry|accounting entry|ledger entry|accomplishment|achievement|payment|attainment|note|annotation|notation|title|estimate|estimation|approximation|idea 
+Crime|transgression|evildoing|transgression|evildoing 
+Crops|output|yield|plant|flora|plant life|collection|aggregation|accumulation|assemblage|end product|output|handle|grip|handgrip|hold|stomach|tummy|tum|breadbasket 
+Currency|medium of exchange|monetary system|prevalence|presentness|nowness 
+Dams|barrier|metric linear unit|female 
+Debts|indebtedness|liability|financial obligation|liabilities|obligation 
+Declassification|decrease|diminution|reduction|step-down 
+Defense|military action|action|protection|team|squad|justification|psychoanalytic process|process|unconscious process|executive department|collection|aggregation|accumulation|assemblage|answer|organization|organisation|structure|construction|due process|due process of law|protection 
+Delinquency|nonpayment|default|nonremittal|negligence|neglect|neglectfulness|misbehavior|misbehaviour|misdeed 
+Deportation|banishment|proscription|ejection|exclusion|expulsion|riddance 
+Diamonds|jewel|gem|precious stone|carbon|C|atomic number 6|transparent gem|parallelogram|playing card|tract|piece of land|piece of ground|parcel of land|parcel|playing field|athletic field|playing area|field 
+Discrimination|social control|basic cognitive process 
+Diseases|illness|unwellness|malady|sickness 
+Diving|match|swimming|swim 
+Doctors|medical practitioner|medical man|theologian|theologist|theologizer|theologiser|play|child's play|scholar|scholarly person|bookman|student 
+Documentaries|movie|film|picture|moving picture|moving-picture show|motion picture|motion-picture show|picture show|pic|flick 
+Draft|negotiable instrument|wind|air current|current of air|sketch|study|drink|text|textual matter|depth|deepness|regulator|dose|dosage|mobilization|mobilisation|militarization|militarisation|swallow|drink|deglutition|pull|pulling 
+Drawbridges|bridge|span 
+Drones|bee|intonation|modulation|pitch contour|idler|loafer|do-nothing|layabout|bum|heavier-than-air craft|pipe 
+Earthquakes|geological phenomenon|disturbance|disruption|commotion|flutter|hurly burly|to-do|hoo-ha|hoo-hah|kerfuffle 
+Ecology|environment|biology|biological science 
+Elderly|age group|age bracket|cohort 
+Elections|vote|choice|selection|option|pick|status|position|predestination|foreordination|preordination|predetermination 
+Employment|state|occupation|business|job|line of work|line|action|activity 
+Energy|physical phenomenon|force|forcefulness|strength|drive|liveliness|life|spirit|sprightliness|good health|healthiness|physical phenomenon|executive department 
+Engineers|person|individual|someone|somebody|mortal|soul|operator|manipulator 
+Entertainment|diversion|recreation 
+Eskimos|Indian|American Indian|Red Indian|Eskimo-Aleut|Eskimo-Aleut language 
+Estates|property|belongings|holding|real property|real estate|realty|immovable|class|stratum|social class|socio-economic class 
+Estuaries|body of water|water 
+Ethanol|alcohol|plant product 
+Explosives|chemical|chemical substance 
+Exports|commodity|trade good|good 
+Expositions|interpretation|collection|aggregation|accumulation|assemblage|explanation|account|section|subdivision 
+Fabrics|artifact|artefact|structure 
+Fees|fixed charge|fixed cost|fixed costs|interest|stake 
+Fellowships|association|friendship|friendly relationship|aid|economic aid|financial aid|prize|award 
+Fertilizers|chemical|chemical substance 
+Films|show|product|production|medium|photographic paper|photographic material|object|physical object|sheet|flat solid|wrapping|wrap|wrapper 
+Finance|commercial enterprise|business enterprise|business|economics|economic science|political economy|management|direction 
+Firefighters|defender|guardian|protector|shielder 
+Fish|aquatic vertebrate|food|solid food|person|individual|someone|somebody|mortal|soul
+Fisheries|workplace|work 
+Fishing|outdoor sport|field sport|commercial enterprise|business enterprise|business 
+Flags|emblem|list|listing|iridaceous plant|visual signal|golf equipment|paving stone|tail 
+Flavorings|ingredient|fixings 
+Flaxseeds|oilseed|oil-rich seed 
+Floods|geological phenomenon|batch|deal|flock|good deal|great deal|hatful|heap|lot|mass|mess|mickle|mint|mountain|muckle|passel|peck|pile|plenty|pot|quite a little|raft|sight|slew|spate|stack|tidy sum|wad|light|light source|flow|stream|filling|tide 
+Foods|substance|solid|content|cognitive content|mental object 
+Footwear|clothing|article of clothing|vesture|wear|wearable|habiliment|covering 
+Forfeitures|loss|penalty|act|deed|human action|human activity 
+Forgery|imitation|falsification|falsehood|crime|offense|criminal offense|criminal offence|offence|law-breaking 
+Fossils|oldster|old person|senior citizen|golden ager|remains 
+Foundations|relation|financial institution|financial organization|financial organisation|support|education|assumption|supposition|supposal|undergarment|unmentionable|beginning|start|commencement 
+Fraud|crime|offense|criminal offense|criminal offence|offence|law-breaking|deceiver|cheat|cheater|trickster|beguiler|slicker|trickery|chicanery|chicane|guile|wile|shenanigan 
+Freight|merchandise|ware|product|transportation|shipping|transport|rate|charge per unit 
+Fruits|reproductive structure|product|production|consequence|aftermath 
+Gambling|diversion|recreation|vice 
+Gaming|diversion|recreation|vice 
+Gases|state of matter|state|fluid|fuel|hydrocarbon|physical condition|physiological state|physiological condition|pedal|treadle|foot pedal|foot lever|fossil fuel 
+Gasohol|fuel|hydrocarbon 
+Gasoline|fuel|hydrocarbon 
+Ginseng|root|herb|herbaceous plant 
+Gold|precious metal|yellow|yellowness|noble metal|wealth|riches|invaluableness|preciousness|pricelessness|valuableness 
+Grains|atom|molecule|particle|corpuscle|mote|speck|foodstuff|food product|leather|metric weight unit|weight unit|troy unit|apothecaries' unit|apothecaries' weight|avoirdupois unit|seed|cereal|cereal grass|smallness|littleness|texture|constitution|composition|physical composition|makeup|make-up 
+Guarantees|assurance|pledge|assurance|pledge|collateral 
+Guns|weapon|arm|weapon system|armament|shot|shooter|murderer|liquidator|manslayer|pump|pedal|treadle|foot pedal|foot lever|discharge|firing|firing off 
+Handicrafts|work|piece of work|trade|craft|arts and crafts 
+Harbors|port|refuge|sanctuary|asylum 
+Health|wellbeing|well-being|welfare|upbeat|eudaemonia|eudaimonia|condition|status 
+Heliports|airport|airdrome|aerodrome|drome 
+Helium|chemical element|element|noble gas|inert gas|argonon 
+Hemophilia|blood disease|blood disorder|sex-linked disorder 
+Herbicides|chemical|chemical substance 
+Hobbies|pastime|interest|pursuit|plaything|toy|falcon 
+Hogs|selfish person|lamb|swine 
+Homeless|unfortunate|unfortunate person|poor people|poor 
+Homesteads|land|estate|land|landed estate|acres|demesne|dwelling|home|domicile|abode|habitation|dwelling house 
+Horses|equine|equid|gymnastic apparatus|exerciser|military personnel|soldiery|troops|framework|chessman|chess piece 
+Hospitals|medical building|health facility|healthcare facility|medical institution 
+Hostages|prisoner|captive 
+Housing|structure|construction|protective covering|protective cover|protection|stable gear|saddlery|tack 
+Hunting|outdoor sport|field sport|blood sport|activity|labor|labour|toil 
+Immigration|migration|body 
+Imports|commodity|trade good|good|foreigner|alien|noncitizen|outlander|message|content|subject matter|substance|meaning|substance|significance 
+Indians|Amerindian|Native American|Asian|Asiatic|natural language|tongue 
+Information|message|content|subject matter|substance|cognition|knowledge|noesis|accusation|accusal|collection|aggregation|accumulation|assemblage|information measure 
+Insulation|isolation|building material|protection 
+Insurance|security|protection|contract|protection|shelter 
+Intelligence|ability|power|administrative unit|administrative body|information|info|information|info|information gathering 
+Investigations|inquiry|enquiry|research|work 
+Investments|finance|assets|committedness|commitment|skin|tegument|cutis|dressing|grooming|promotion 
+Iron|metallic element|metal|golf club|golf-club|club|implement|home appliance|household appliance 
+Irrigation|provision|supply|supplying|medical care|medical aid 
+Kites|check|bank check|cheque|check|bank check|cheque|plaything|toy|hawk 
+Labor|class|stratum|social class|socio-economic class|work|parturition|birth|giving birth|birthing|reform movement|labor party|labour party|executive department|work 
+Laboratories|workplace|work|region 
+Land|real property|real estate|realty|immovable|object|physical object|region|object|physical object|administrative district|administrative division|territorial division|sphere|domain|area|orbit|field|arena|real property|real estate|realty|immovable|people|political unit|political entity
+Law|collection|aggregation|accumulation|assemblage|legal document|legal instrument|official document|instrument|concept|conception|construct|concept|conception|construct|philosophy|learned profession|force|personnel|law enforcement agency 
+Lawyers|professional|professional person 
+Lead|advantage|vantage|metallic element|metal|evidence|grounds|leadership|leading|angle|section|subdivision|score|actor|histrion|player|thespian|role player|position|place|guidance|counsel|counseling|counselling|direction|news article|news story|newspaper article|timing|restraint|constraint|strip|slip|graphite|black lead|plumbago|jumper|wire|conducting wire|turn|play 
+Lime|hydroxide|hydrated oxide|oxide|adhesive material|adhesive agent|adhesive|citrus|citrus tree|tree|citrus|citrus fruit|citrous fruit 
+Linseeds|oilseed|oil-rich seed 
+Liquors|alcohol|alcoholic drink|alcoholic beverage|intoxicant|inebriant|liquid|broth|stock 
+Livestock|placental|placental mammal|eutherian|eutherian mammal 
+Lotteries|accident|stroke|fortuity|chance event|game of chance|gambling game 
+Lumber|building material|bat|baseball equipment 
+Magazines|press|public press|publication|product|production|publisher|publishing house|publishing firm|publishing company|supply chamber|storehouse|depot|entrepot|storage|store|supply chamber 
+Mail|message|communication|communicating|conveyance|transport|collection|aggregation|accumulation|assemblage|body armor|body armour|suit of armor|suit of armour|coat of mail|cataphract 
+Manpower|force|personnel 
+Margarine|spread|paste 
+Marihuana|cannabis|hemp|soft drug|controlled substance 
+Marijuana|cannabis|hemp|soft drug|controlled substance 
+Medals|award|accolade|honor|honour|laurels 
+Memorials|recognition|credit|message|content|subject matter|substance|structure|construction 
+Mercury|metallic element|metal
+Metals|chemical element|element|mixture 
+Methane|methane series|alkane series|alkane|paraffin series|paraffin|gas 
+Micronesia|country|state|land
+Miners|laborer|manual laborer|labourer|jack 
+Mines|excavation|explosive device 
+Mohair|fabric|cloth|material|textile 
+Money|medium of exchange|monetary system|wealth|currency 
+Motorcycles|motor vehicle|automotive vehicle 
+Munitions|instrumentality|instrumentation|armament|defensive structure|defense|defence 
+Museums|depository|deposit|depositary|repository 
+Music|auditory communication|sound|auditory sensation|activity|sound|auditory sensation|punishment|penalty|penalization|penalisation 
+Nationality|people|status|position 
+Naturalization|naturalness|proceeding|legal proceeding|proceedings|introduction|debut|first appearance|launching|unveiling|entry|borrowing|adoption 
+Nutrition|organic process|biological process|food|nutrient|science|scientific discipline 
+Nuts|seed|block|linear unit|linear measure|eccentric|eccentric person|flake|oddball|geek|enthusiast|partisan|partizan|male reproductive gland|gonad|sex gland 
+Oil|lipid|lipide|lipoid|oil paint|oil|fossil fuel|edible fat 
+Oleomargarine|spread|paste 
+Paint|coating|coat|coloring material|colouring material|color|colour|space|makeup|make-up|war paint 
+Palau|country|state|land|archipelago 
+Pardon|kindness|benignity|warrant|clemency|mercifulness|mercy 
+Parking|room|way|elbow room|maneuver|manoeuvre|tactical maneuver|tactical manoeuvre 
+Parks|civil rights leader|civil rights worker|civil rights activist|tract|piece of land|piece of ground|parcel of land|parcel|tract|piece of land|piece of ground|parcel of land|parcel|stadium|bowl|arena|sports stadium 
+Parole|promise|positive identification|secret|arcanum|liberation|release|freeing 
+Patents|document|written document|papers|legal document|legal instrument|official document|instrument 
+Penalties|social control|payment|disadvantage|handicap 
+Petroleum|oil|fossil fuel 
+Pets|animal|animate being|beast|brute|creature|fauna|lover|irritability|crossness|fretfulness|fussiness|peevishness|petulance|choler|imaging|tomography 
+Phosphate|salt|soft drink 
+Physicians|medical practitioner|medical man 
+Pilots|aviator|aeronaut|airman|flier|flyer|mariner|seaman|tar|Jack-tar|Jack|old salt|seafarer|gob|sea dog|television program|TV program|television show|TV show|model|example|gas burner|gas jet|framework 
+Pipelines|gossip|comment|scuttlebutt|pipe|pipage|piping 
+Plants|building complex|complex|organism|being|actor|histrion|player|thespian|role player|contrivance|stratagem|dodge 
+Plutonium|chemical element|element 
+Police|force|personnel|law enforcement agency 
+Pollution|environmental condition|impurity|impureness|dirtiness|uncleanness|soiling|soilure|dirtying 
+Polymers|compound|chemical compound 
+Ports|geographic point|geographical point|fortified wine|opening|side|computer circuit 
+Posters|sign|worker|horse|Equus caballus 
+Potassium|metallic element|metal 
+Printing|writing|commercial enterprise|business enterprise|business|writing|publication 
+Prisoners|unfortunate|unfortunate person 
+Prisons|correctional institution|situation|state of affairs 
+Privacy|reclusiveness|isolation 
+Proclamations|statement|act|deed|human action|human activity 
+Publications|work|piece of work|printing|communication|commercial enterprise|business enterprise|business 
+Quarantine|isolation|isolation|closing off 
+Radio|broadcasting|receiver|receiving system|communication system 
+Radon|chemical element|element|noble gas|inert gas|argonon 
+Railroads|line|track 
+Reclamation|restoration|rescue|deliverance|delivery|saving|recovery|retrieval 
+Recordings|signal|signaling|sign|creating from raw materials|memory device|storage device 
+Records|evidence|sound recording|audio recording|audio|number|accomplishment|achievement|fact|attainment|document|list|listing 
+Recycling|use|usage|utilization|utilisation|employment|exercise 
+Refugees|exile|expatriate|expat 
+Reindeer|deer|cervid 
+Repatriation|return|homecoming 
+Research|investigation|investigating|problem solving 
+Reservoirs|supply|lake|tank|storage tank|thing 
+Retirement|status|position|termination|ending|conclusion|withdrawal 
+Rights-of-way|easement|right|passage 
+Rivers|stream|watercourse 
+Roads|anchorage|anchorage ground|way|means|agency|way 
+Rockets|vehicle|jet engine|herb|herbaceous plant|visual signal|firework|pyrotechnic 
+Royalties|payment|house 
+Rubies|jewel|gem|precious stone|transparent gem|corundom|corundum|red|redness 
+Rugs|floor cover|floor covering|furnishing 
+Safety|condition|status|area|country|device|hit|contraceptive|preventive|preventative|contraceptive device|prophylactic device|birth control device|score 
+Sanctions|approval|commendation|social control|permission|authorization|authorisation|empowerment 
+Sanitation|sanitariness|cleaning|cleansing|cleanup 
+Satellites|equipment|follower|celestial body|heavenly body 
+Schools|educational institution|building|edifice|education|body|time period|period of time|period|educational institution|animal group 
+Scientists|person|individual|someone|somebody|mortal|soul 
+Seafood|food|solid food 
+Seals|fastener|fastening|holdfast|fixing|device|fur|pelt|bluejacket|navy man|sailor|sailor boy|stamp|impression|award|accolade|honor|honour|laurels|coating|coat|fastener|fastening|holdfast|fixing|pinniped mammal|pinniped|pinnatiped 
+Seaplanes|airplane|aeroplane|plane 
+Securities|safety|assets|fearlessness|bravery|legal document|legal instrument|official document|instrument|transferred property|transferred possession|department|section|guarantee|warrant|warrantee|warranty|electrical device|precaution|safeguard|guard 
+Seeds|fruit|ovule|player|participant|inspiration|liquid body substance|bodily fluid|body fluid|humor|humour 
+Serums|liquid body substance|bodily fluid|body fluid|humor|humour 
+Sheep|bovid|simpleton|simple|follower 
+Shipping|commercial enterprise|business enterprise|business|conveyance|transport 
+Shoes|situation|position|footwear|footgear|case|plate|scale|shell|restraint|constraint 
+Silver|noble metal|conductor|precious metal|gray|grayness|grey|greyness|silverware|trophy|prize 
+Sirup|sweetening|sweetener 
+Smoking|breathing|external respiration|respiration|ventilation|vaporization|vaporisation|vapor|vapour|evaporation 
+Sodium|metallic element|metal 
+Sports|diversion|recreation|occupation|business|job|line of work|line|vacationer|vacationist|person|individual|someone|somebody|mortal|soul|athlete|jock|organism|being|wit|humor|humour|witticism|wittiness 
+Statistics|applied mathematics|applied math|datum|data point 
+Steel|alloy|metal|weapon|arm|weapon system|sharpener 
+Sterilization|operation|surgery|surgical operation|surgical procedure|surgical process|cleaning|cleansing|cleanup 
+Stills|photograph|photo|exposure|picture|pic|silence|quiet|apparatus|setup|plant|works|industrial plant 
+Stockpiling|repositing|reposition|storage|warehousing 
+Stocks|framework|framework|instrument of punishment|capital|working capital|merchandise|ware|product|handle|grip|handgrip|hold|support|security|certificate|accumulation|genealogy|family tree|variety|animal group|soup|repute|reputation|stalk|stem|plant part|plant structure|flower|flower|lumber|timber|handle|grip|handgrip|hold|cravat|placental|placental mammal|eutherian|eutherian mammal 
+Students|enrollee|intellectual|intellect 
+Sugar|sweetening|sweetener|macromolecule|supermolecule|money 
+Sulfur|chemical element|element 
+Superfund|program|programme 
+Swaps|exchange|interchange 
+Swine|even-toed ungulate|artiodactyl|artiodactyl mammal 
+Symbols|signal|signaling|sign|representational process 
+Synthetics|compound|chemical compound 
+Syrup|sweetening|sweetener 
+Taxes|levy|reaction|response|operation|surgery|surgical operation|surgical procedure|surgical process 
+Tea|beverage|drink|drinkable|potable|meal|repast|shrub|bush|reception|herb 
+Teachers|educator|pedagogue|pedagog|abstraction|abstract 
+Technology|application|practical application|profession|discipline|subject|subject area|subject field|field|field of study|study|bailiwick 
+Telecommunications|medium|electrical engineering|EE 
+Telegraph|apparatus|setup 
+Telemarketing|selling|merchandising|marketing 
+Telephone|electronic equipment|telecommunication|telecom 
+Television|broadcasting|telecommunication system|telecom system|telecommunication equipment|telecom equipment|receiver|receiving system 
+Textiles|artifact|artefact 
+Thorium|metallic element|metal 
+Timber|building material|beam|post|land|dry land|earth|ground|solid ground|terra firma|biome|sound property 
+Time|case|instance|example|time period|period of time|period|time period|period of time|period|moment|minute|second|instant|attribute|experience|reading|meter reading|indication|dimension|rhythmicity|term 
+Tires|hoop|ring 
+Tobacco|plant product|drug of abuse|street drug|herb|herbaceous plant 
+Toiletries|instrumentality|instrumentation 
+Toxins|poison|toxicant|poisonous substance 
+Toys|artifact|artefact|replica|replication|reproduction|device|copy|dog|domestic dog|Canis familiaris 
+Trademarks|characteristic|marker|marking|mark 
+Trails|path|track|course|track|cart track|cartroad|evidence|grounds 
+Transportation|facility|installation|movement|charge|executive department|commercial enterprise|business enterprise|business|banishment|proscription 
+Travel|motion|movement|move|movement|motion|motion|movement|move 
+Trucks|motor vehicle|automotive vehicle|handcart|pushcart|cart|go-cart 
+Turpentine|oleoresin|essential oil|volatile oil 
+Unions|organization|organisation
+Universities|body|establishment|educational institution 
+Uranium|metallic element|metal 
+Utilities|service|quality|service|system of measurement|metric|program|programme|computer program|computer programme|facility|installation 
+Vaccines|immunogen|immunizing agent 
+Vegetables|produce|green goods|green groceries|garden truck|herb|herbaceous plant 
+Vessels|tube|tube-shaped structure|craft|container 
+Veterans|serviceman|military man|man|military personnel|serviceman|military man|man|military personnel|expert 
+Veterinarians|doctor|doc|physician|MD|Dr.|medico 
+Vinyl|group|radical|chemical group|plastic 
+Viruses|microorganism|micro-organism|infectious agent|infective agent|representation|delegacy|agency|malevolent program 
+Visas|sanction|countenance|endorsement|indorsement|warrant|imprimatur 
+Volunteers|serviceman|military man|man|military personnel|worker|American 
+Wages|consequence|aftermath|regular payment 
+Warehouses|storehouse|depot|entrepot|storage|store 
+Warranties|assurance|pledge 
+Watersheds|line|geographical area|geographic area|geographical region|geographic region|juncture|occasion 
+Waterways|body of water|water|way 
+Weapons|instrument|persuasion|suasion 
+Wetlands|land|ground|soil 
+Whales|large person|cetacean|cetacean mammal|blower 
+Wine|alcohol|alcoholic drink|alcoholic beverage|intoxicant|inebriant|dark red 
+Women|female|female person|adult|grownup|female|female person|cleaner|class|stratum|social class|socio-economic class 
+Wood|plant material|plant substance|vegetation|flora|botany
+Wool|fabric|cloth|material|textile|animal fiber|animal fibre|coat|pelage 
+X-rays|electromagnetic radiation|electromagnetic wave|nonparticulate radiation|ionizing radiation|radiogram|radiograph|shadowgraph|skiagraph|skiagram 
+Yogurt|dairy product|food|solid food 
+Youth|juvenile|juvenile person|age group|age bracket|cohort|time of life|maturity|matureness|time period|period of time|period|youngness 
+Zinc|metallic element|metal 
+Zoning|division|partition|partitioning|segmentation|sectionalization|sectionalisation 
