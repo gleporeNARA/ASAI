@@ -5,6 +5,8 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+//import java.nio.charset.StandardCharsets;
+import java.util.Date;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -16,12 +18,16 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import javax.swing.JTable;
+import javax.swing.JTextField;
 //import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 import javax.swing.border.Border;
 
 import javax.swing.JProgressBar;
+
+//import java.security.MessageDigest;
+//import javax.swing.table.DefaultTableModel;
 
 public class fileLister extends JFrame {
 
@@ -43,7 +49,13 @@ public class fileLister extends JFrame {
     private JPanel topPanel = new JPanel(new GridLayout(1,2));		// Top Panel - button and directory panels
     private JPanel buttonPanel = new JPanel(new GridLayout(2,2));
     private JPanel dirPanel = new JPanel();
-    private JPanel progressPanel = new JPanel(new GridLayout(1, 2));	
+    private JPanel progressPanel = new JPanel(new GridLayout(1, 2));
+    
+    // data for the file lister
+/*    private JLabel fileName;
+    private JTextField path;
+    private JLabel date;
+    private JLabel size;*/
     
     public fileLister() {
 
@@ -61,10 +73,11 @@ public class fileLister extends JFrame {
         
         // data from the files
         Object[][] data = new Object[][]{
-        	{"Text Area Here", null, null, null, null, null}
+        	{null, null, null, null, null, null}
         };
         
         table = new JTable(data, columns);
+        //table = new JTable();
         centerPanel.add(new JScrollPane(table));
         
         // file extension and number of file extensions
@@ -97,9 +110,40 @@ public class fileLister extends JFrame {
             	  //String selectedFile = fileChooser.getSelectedFile().getPath();
             	  File selectedFile = fileChooser.getSelectedFile();
             	  JOptionPane.showMessageDialog(null, "You selected " + selectedFile.getName());
+            	  /*File file = Chooser.getSelectedFile();
+            	  textField.setText(file.getAbsolutePath())*/
               }
             }
           });
+        
+        // Test - Print out the metadata when a file is selected
+        File f = new File("Topic_List.txt");
+        
+        // File Name
+        System.out.println("File Name: " +  f.getName());
+        
+        // Size (bytes)
+        System.out.println("Size (bytes): " + f.length() + " bytes");
+        
+        // Data Modified
+        System.out.println("Date Modified: " + new Date(f.lastModified()).toString());
+        
+        // File extension
+        String fileExtension=" ";
+        String fileName=f.getName();
+        if(fileName.contains(".") && fileName.lastIndexOf(".")!= 0)
+        {
+        	fileExtension=fileName.substring(fileName.lastIndexOf(".")+1);
+        }
+        System.out.println("File Extension: " + fileExtension);
+        
+        // Full Path 
+        String absolutePath = f.getAbsolutePath();
+        System.out.println("Full Path: " + absolutePath);
+        
+        // SHA-256 HASH
+        System.out.println("SHA-256 HASH: ");
+
         buttonPanel.add(cancel);
         buttonPanel.add(run);
         buttonPanel.add(createReport);
