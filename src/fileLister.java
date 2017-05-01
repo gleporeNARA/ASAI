@@ -1,4 +1,7 @@
 import org.apache.commons.io.FileUtils;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -6,6 +9,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
 import java.util.Collection;
 //import java.nio.charset.StandardCharsets;
@@ -23,7 +27,7 @@ import javax.swing.JPanel;
 
 import javax.swing.JTable;
 import javax.swing.JTextField;
-//import javax.swing.JTextArea;
+import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 import javax.swing.border.Border;
@@ -31,21 +35,25 @@ import javax.swing.border.Border;
 import javax.swing.JProgressBar;
 
 //import java.security.MessageDigest;
-//import javax.swing.table.DefaultTableModel;
+import javax.swing.table.DefaultTableModel;
 
 public class fileLister extends JFrame {
 
-	private JLabel label = new JLabel("[No directory selected]");
-	private Border border = BorderFactory.createTitledBorder("Directory Options");
-	private JCheckBox calculate = new JCheckBox("Calculate SHA256?");
-	private JCheckBox checkSubDir = new JCheckBox("Check Subdirectories");
+    private JLabel label = new JLabel("[No directory selected]");
+    private Border border = BorderFactory.createTitledBorder("Directory Options");
+    //private JCheckBox calculate = new JCheckBox("Calculate SHA256?");
+    private JCheckBox checkSubDir = new JCheckBox("Check Subdirectories");
+    private JCheckBox rowHeaders = new JCheckBox("Extract Row Headers");
     private JButton browse = new JButton("Browse...");
     private JButton cancel = new JButton("Cancel");
     private JButton run = new JButton("Run");
     private JButton createReport = new JButton("Create Report");
 
     private JTable table = new JTable();	
-    private JTable table2 = new JTable();
+    private JTextArea area =new JTextArea("Process xxx amount of directories...\n\n"
+    					 + "Processing file number 1 out of 1,000 files...\n\n"
+    					 + "Currently processing file MotionLamp.csv..."); 
+    //private JTable table2 = new JTable();
     //private JTextArea textArea;			// Text Area for the tables
     
     private JPanel mainPanel = new JPanel(new BorderLayout(10,10));	// Main Panel - Made up of many other panels
@@ -55,6 +63,10 @@ public class fileLister extends JFrame {
     private JPanel dirPanel = new JPanel();
     private JPanel progressPanel = new JPanel(new GridLayout(1, 2));
     
+    
+ /* static final int MY_MINIMUM = 0;		// Set the minimum value of progress bar to zero
+    static final int MY_MAXIMUM = 100;		// Set the maximum value of progress bar to one hundred
+*/    
     // data for the file lister
 /*    private JLabel fileName;
     private JTextField path;
@@ -71,26 +83,71 @@ public class fileLister extends JFrame {
 
         setLayout(new BorderLayout(10, 10));
 
-        // columns for the file
-        String[] columns = {"File Name", "Size (bytes)", "Date Modified", 
-    			"File Extension", "Full Path", "SHA-256 HASH"};
+        // results output window
+        String[] columns = {"File Name", "File Path", "File Extension", "Number of Sheets",  
+        					"Sheet Names", "Rows", "Columns", "File Size", "Date Created"}; 
+        					//, "SHA-256 HASH"};
         
         // data from the files
-        Object[][] data = new Object[][]{
-        	{null, null, null, null, null, null}
-        };
+/*        Object[][] data = new Object[][]{
+        	{null, null, null, null, null, null, null, null, null}//, null}
+        };*/
         
-        table = new JTable(data, columns);
+        // testing for defaultTableModel
+        DefaultTableModel model = new DefaultTableModel();
+        JTable table = new JTable(model);
+        
+        // for loop to add each of the columns in the indices
+        for(int i = 0; i< columns.length; i++)
+        {
+            model.addColumn(columns[i]);
+        }
+       // model.addColumn("Col2");
+
+        // Create the first row
+        model.insertRow(0, new Object[] { "Inserts a Row" });
+        
+        // Insert a row at position p
+        int p = 1;
+        model.insertRow(p, new Object[] { "Position Insert" });
+        
+        
+        // Displaying the tables into the center
+        //table = new JTable(data, columns);
         //table = new JTable();
         centerPanel.add(new JScrollPane(table));
         
-        // file extension and number of file extensions
-        String[] columns2 = {"Extension", "Count"};
+        // processing output window
+/*        String[] columns2 = {"Process 20 directory", "Processing file number 1 out of 1,000 files", "Currently processing file file.csv"};
         Object[][] data2 = new Object[][]{
-        	{"Text Area 2 Here", null}
-        };
-        table2 = new JTable(data2, columns2);
-        centerPanel.add(new JScrollPane(table2));
+        	{null, null, null}
+        };*/
+        
+        // test for processing a csv file
+        String csvFile = "C:/Users/kphan/Documents/MotionLamp.csv";
+        BufferedReader br = null;
+        String line = "";
+        String cvsSplitBy = ",";
+
+        try {
+
+            br = new BufferedReader(new FileReader(csvFile));
+            while ((line = br.readLine()) != null) {
+
+                // use comma as separator
+                String[] columnTest = line.split(cvsSplitBy);
+
+                System.out.println("[ " + columnTest[3] + " , " + columnTest[4] + "]");
+
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        //table2 = new JTable(data2, columns2); 
+        centerPanel.add(new JScrollPane(area));
         
         //panel1.add(centerPanel);
 
@@ -123,6 +180,7 @@ public class fileLister extends JFrame {
             	  //String selectedFile = fileChooser.getSelectedFile().getPath();
             	  File selectedFile = fileChooser.getCurrentDirectory();
             	  label.setText(selectedFile.getName()); 
+            	 
             	  //JOptionPane.showMessageDialog(null, "You selected " + selectedFile.getName());
             	  /*File file = Chooser.getSelectedFile();
             	  textField.setText(file.getAbsolutePath())*/
@@ -164,15 +222,16 @@ public class fileLister extends JFrame {
         
         // dirPanel - label and the check boxes
         dirPanel.add(label);
-        dirPanel.add(calculate);
+        //dirPanel.add(calculate);
         dirPanel.add(checkSubDir);
+        dirPanel.add(rowHeaders);
         
         // Once the user checks the checked box, then it will
         // display the extensions csv, xls, xlsx, and ods
         
         checkSubDir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                File root = new File("c:\\");
+                File root = new File("c:\\Users\\kphan");
                 //String fileName = "a.txt";
                 String[] extensions = { "csv", " xls", "xlsx", "ods" };
                try{
@@ -182,9 +241,7 @@ public class fileLister extends JFrame {
 
                 for (Iterator iterator = files.iterator(); iterator.hasNext();) {
                   File file = (File) iterator.next();
-/*                  if (file.getName().equals(fileName))
-                      System.out.println(file.getAbsolutePath());
-*/
+
                   System.out.println("Found File: " + file.getName());
                 }
                } catch (Exception e) {
@@ -201,15 +258,58 @@ public class fileLister extends JFrame {
         label.setForeground(Color.red);
         
         // progress bar
-        JProgressBar current = new JProgressBar(0, 2000);
-        int num = 0;
-        
+        //JProgressBar current = new JProgressBar(0, 2000);
+        JProgressBar current = new JProgressBar(JProgressBar.HORIZONTAL);
+        run.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+	        //JProgressBar current = new JProgressBar(JProgressBar.HORIZONTAL);
+	        current.setIndeterminate(true);
+            }
+        });
+        //int num = 0;
+
         JPanel pane = new JPanel();
-        current.setValue(0);
-        current.setStringPainted(true);
+        //current.setValue(0);
+        //current.setStringPainted(true);
         pane.add(current);
         
+        // loads the percentages for progress bar
+/*        public void iterate(){ 
+  		 while (num < 2000) {
+            current.setValue(num);
+            try {
+              Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+            num += 95;
+          }
+    }*/
+        
         progressPanel.add(current);
+        
+        /*checkSubDir.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+            	while (num < 2000) {
+            		JProgressBar current = new JProgressBar(0, 2000);
+                    int num = 0;
+                    
+                    JPanel pane = new JPanel();
+                    current.setValue(0);
+                    current.setStringPainted(true);
+                    pane.add(current);
+            	      current.setValue(num);
+            	      try {
+            	        Thread.sleep(1000);
+            	      } catch (InterruptedException e) {
+            	      }
+            	      num += 95;
+            	    }
+            	while (num < 2000) {
+            		JProgressBar current = new JProgressBar(0, 2000);
+                    int num = 0;  
+            	
+            }*/
+        //});
 
         mainPanel.add(topPanel, BorderLayout.NORTH);			
         mainPanel.add(centerPanel, BorderLayout.CENTER);
