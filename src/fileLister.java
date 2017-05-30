@@ -1,7 +1,10 @@
 import org.apache.commons.io.FileUtils;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.File;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -9,10 +12,8 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
+
 import java.util.Collection;
-//import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.Iterator;
 
@@ -24,26 +25,24 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 import javax.swing.border.Border;
-
 import javax.swing.JProgressBar;
-
-//import java.security.MessageDigest;
 import javax.swing.table.DefaultTableModel;
+
+import java.text.SimpleDateFormat;
 
 public class fileLister extends JFrame {
 
 	private JLabel label = new JLabel("[No directory selected]");
 	private Border border = BorderFactory.createTitledBorder("Directory Options");
-	//private JCheckBox calculate = new JCheckBox("Calculate SHA256?");
 	private JCheckBox checkSubDir = new JCheckBox("Check Subdirectories");
 	private JCheckBox rowHeaders = new JCheckBox("Extract Row Headers");
+	
     private JButton browse = new JButton("Browse...");
     private JButton cancel = new JButton("Cancel");
     private JButton run = new JButton("Run");
@@ -51,8 +50,6 @@ public class fileLister extends JFrame {
 
     private JTable table = new JTable();	
     private JTextArea area =new JTextArea(); 
-    //private JTable table2 = new JTable();
-    //private JTextArea textArea;			// Text Area for the tables
     
     private JPanel mainPanel = new JPanel(new BorderLayout(10,10));	// Main Panel - Made up of many other panels
     private JPanel centerPanel = new JPanel(new GridLayout(2,1));   // Center Panel - Consists of two tables
@@ -64,37 +61,23 @@ public class fileLister extends JFrame {
     // test for directory selected
     File selectedFile;
     
+    // testing global variable display file name
     String displayFileName;
-    
- /* static final int MY_MINIMUM = 0;		// Set the minimum value of progress bar to zero
-    static final int MY_MAXIMUM = 100;		// Set the maximum value of progress bar to one hundred
-*/    
-    // data for the file lister
-/*    private JLabel fileName;
-    private JTextField path;
-    private JLabel date;
-    private JLabel size;*/
     
     public fileLister() {
 
         super("File Lister 1.0");
-
+        
+        setExtendedState(JFrame.MAXIMIZED_BOTH); 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(new Dimension(1000, 600));
-        //setResizable(false);
 
         setLayout(new BorderLayout(10, 10));
 
         // results output window
-        String[] columns = {"Directory Paths", "File Name", "File Extension", "Number of Sheets",  
+        String[] columns = {"Paths", "File Name", "Extension", "Number of Sheets",  
         					"Sheet Titles", "Number of Rows", "Number of Columns", "Date Created",
-        					"Size", "Most Used Term", "Mostly Text or Numbers", "Special Characters"}; 
-        					//, "SHA-256 HASH"};
-        
-        // data from the files
-/*        Object[][] data = new Object[][]{
-        	{null, null, null, null, null, null, null, null, null}//, null}
-        };*/
+        					"Size", "Most Used Terms", "Text and Numbers", "Special Characters"}; 
         
         // testing for defaultTableModel
         DefaultTableModel model = new DefaultTableModel();
@@ -105,55 +88,10 @@ public class fileLister extends JFrame {
         {
         	model.addColumn(columns[i]);
         }
-       // model.addColumn("Col2");
-
-        // Create the first row
-       // model.insertRow(0, new Object[] { "Inserts a Row" });
         
-        // Insert a row at position p
-        int p = 1;
-       // model.insertRow(p, new Object[] { "Position Insert" });
-        
-        
-        // Displaying the tables into the center
-        //table = new JTable(data, columns);
-        //table = new JTable();
-        centerPanel.add(new JScrollPane(table));
-        
-        // processing output window
-/*        String[] columns2 = {"Process 20 directory", "Processing file number 1 out of 1,000 files", "Currently processing file file.csv"};
-        Object[][] data2 = new Object[][]{
-        	{null, null, null}
-        };*/
-        
-        // test for processing a csv file
-        String csvFile = "C:/Users/kphan/Documents/MotionLamp.csv";
-        BufferedReader br = null;
-        String line = "";
-        String cvsSplitBy = ",";
-
-        try {
-
-            br = new BufferedReader(new FileReader(csvFile));
-            while ((line = br.readLine()) != null) {
-
-                // use comma as separator
-                String[] columnTest = line.split(cvsSplitBy);
-
-                //System.out.println("[ " + columnTest[3] + " , " + columnTest[4] + "]");
-
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        
-        //table2 = new JTable(data2, columns2); 
+        centerPanel.add(new JScrollPane(table));  
         centerPanel.add(new JScrollPane(area));
-        
-        //panel1.add(centerPanel);
-
+ 
         // buttons panel
         buttonPanel.add(browse);
         
@@ -161,64 +99,19 @@ public class fileLister extends JFrame {
         // the directory selected onto the directory options
         browse.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-/*              JFileChooser fileChooser = new JFileChooser();
-              int returnValue = fileChooser.showOpenDialog(null);*/
             	 JFileChooser fileChooser = new JFileChooser();
             	 fileChooser.setCurrentDirectory(new java.io.File("."));
             	 fileChooser.setDialogTitle("Directory Selection");
             	 fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
             	 fileChooser.setAcceptAllFileFilterUsed(false);
-              //if (returnValue == JFileChooser.APPROVE_OPTION)
               if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
               {
-            	/* This will get the current directory.
-            	 * 
-            	 * File selectedFile = fileChooser.getCurrentDirectory();
-            	   System.out.println(selectedFile.getName());
-            	*/
             	  
-            	  // This will get the full path name
-            	  // selectedFile.getName() along with getSelectedFile() will get the file name
-            	  
-            	  //String selectedFile = fileChooser.getSelectedFile().getPath();
             	  selectedFile = fileChooser.getCurrentDirectory();
             	  label.setText(selectedFile.getName()); 
-            	  //System.out.println(selectedFile);
-            	 
-            	  //JOptionPane.showMessageDialog(null, "You selected " + selectedFile.getName());
-            	  /*File file = Chooser.getSelectedFile();
-            	  textField.setText(file.getAbsolutePath())*/
               }
             }
           });
-
-        // Test - Print out the metadata when a file is selected
-/*        File f = new File("Topic_List.txt");
-        
-        // File Name
-        System.out.println("File Name: " +  f.getName());
-        
-        // Size (bytes)
-        System.out.println("Size (bytes): " + f.length() + " bytes");
-        
-        // Data Modified
-        System.out.println("Date Modified: " + new Date(f.lastModified()).toString());
-        
-        // File extension
-        String fileExtension=" ";
-        String fileName=f.getName();
-        if(fileName.contains(".") && fileName.lastIndexOf(".")!= 0)
-        {
-        	fileExtension=fileName.substring(fileName.lastIndexOf(".")+1);
-        }
-        System.out.println("File Extension: " + fileExtension);
-        
-        // Full Path 
-        String absolutePath = f.getAbsolutePath();
-        System.out.println("Full Path: " + absolutePath);
-        
-        // SHA-256 HASH
-        System.out.println("SHA-256 HASH: ");*/
 
         buttonPanel.add(cancel);
         buttonPanel.add(run);
@@ -226,7 +119,6 @@ public class fileLister extends JFrame {
         
         // dirPanel - label and the check boxes
         dirPanel.add(label);
-        //dirPanel.add(calculate);
         dirPanel.add(checkSubDir);
         dirPanel.add(rowHeaders);
         
@@ -235,22 +127,20 @@ public class fileLister extends JFrame {
         
         checkSubDir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                File root = new File(selectedFile.toString());
-            	//File root = new File("c:\\Users\\kphan");
-                //String fileName = "a.txt";
+                File directories = new File(selectedFile.toString());
                 String[] extensions = { "csv", " xls", "xlsx", "ods" };
                try{
                 boolean recursive = true;
 
-                Collection files = FileUtils.listFiles(root, extensions, recursive);
+                Collection<File> files = FileUtils.listFiles(directories, extensions, recursive);
 
-                for (Iterator iterator = files.iterator(); iterator.hasNext();) {
+                for (Iterator<File> iterator = files.iterator(); iterator.hasNext();) {
                   File file = (File) iterator.next();
                   displayFileName = file.getName();
                   //System.out.println("Found File: " + file.getName());
-                  area.append(displayFileName + "\n");
+                  //area.append(displayFileName + "\n");
                   
-                  model.insertRow(0, new Object[] { displayFileName });
+                  //model.insertRow(0, new Object[] { displayFileName });
                 }
                 
                 // Test for inserting into the model table
@@ -260,13 +150,7 @@ public class fileLister extends JFrame {
                }
             }
         });
-        
-        
-        //System.out.println("Test :" + displayFileName.toString());
-        
-        // Invoke method to process one file at a time
-        //displayFiles();
-        
+            
         dirPanel.setBorder(border);
         
         // top panel consists of the button panel 
@@ -276,58 +160,74 @@ public class fileLister extends JFrame {
         label.setForeground(Color.red);
         
         // progress bar
-        //JProgressBar current = new JProgressBar(0, 2000);
         JProgressBar current = new JProgressBar(JProgressBar.HORIZONTAL);
+        
+        // sets up action listener for the run button
         run.addActionListener(new ActionListener() {
+        	
+        	/*
+        		Reusing the same code from check sub directories for testing as of now
+        	*/
             public void actionPerformed(ActionEvent ae) {
-	        //JProgressBar current = new JProgressBar(JProgressBar.HORIZONTAL);
-	        current.setIndeterminate(true);
+                File directories = new File(selectedFile.toString());
+                //String[] extensions = { "csv", " xls", "xlsx", "ods" };
+                
+                // A test for only .csv files
+                String[] extensions = { "csv" };
+               try{
+                boolean recursive = true;
+
+                Collection<File> files = FileUtils.listFiles(directories, extensions, recursive);
+
+                for (Iterator<File> iterator = files.iterator(); iterator.hasNext();) {
+                  File file = (File) iterator.next();
+                  displayFileName = file.getName();
+                  //System.out.println("Found File: " + file.getName());
+                  area.append("Currently processing file " + displayFileName + " ...\n\n");
+                  
+                  // Test for getting the file extension
+                  String fileExtension=" ";
+                  if(displayFileName.contains(".") && displayFileName.lastIndexOf(".")!= 0)
+                  {
+                  	fileExtension = displayFileName.substring(displayFileName.lastIndexOf(".")+1);
+                  }            
+                  
+                  // Test for reading the number of rows
+                  BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+                  String input;
+                  int count = 0;
+                  while((input = bufferedReader.readLine()) != null)
+                  {
+                      count++;
+                  }
+                  
+                  // Object for formatting the date
+                  SimpleDateFormat date = new SimpleDateFormat("YYYY-MM-dd");
+                  
+                  /*
+                   * Note: Gets the date for last modified for now
+                   */
+                  
+                  model.insertRow(0, new Object[] { file.getAbsolutePath(), displayFileName, fileExtension, " ", " ", count, " ", 
+                		  date.format(file.lastModified()), file.length() });
+                  //model.insertRow(1, new Object[] { "Tests" });
+                }
+                
+                // Test for inserting into the model table
+                
+               } catch (Exception e) {
+            	   e.printStackTrace();
+               }
+               
+	            // indeterminable progress bar
+		        current.setIndeterminate(true);
             }
         });
-        //int num = 0;
 
         JPanel pane = new JPanel();
-        //current.setValue(0);
-        //current.setStringPainted(true);
-        pane.add(current);
-        
-        // loads the percentages for progress bar
-/*        public void iterate(){ 
-  		 while (num < 2000) {
-            current.setValue(num);
-            try {
-              Thread.sleep(1000);
-            } catch (InterruptedException e) {
-            }
-            num += 95;
-          }
-    }*/
+        pane.add(current);  
         
         progressPanel.add(current);
-        
-        /*checkSubDir.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-            	while (num < 2000) {
-            		JProgressBar current = new JProgressBar(0, 2000);
-                    int num = 0;
-                    
-                    JPanel pane = new JPanel();
-                    current.setValue(0);
-                    current.setStringPainted(true);
-                    pane.add(current);
-            	      current.setValue(num);
-            	      try {
-            	        Thread.sleep(1000);
-            	      } catch (InterruptedException e) {
-            	      }
-            	      num += 95;
-            	    }
-            	while (num < 2000) {
-            		JProgressBar current = new JProgressBar(0, 2000);
-                    int num = 0;  
-            	
-            }*/
-        //});
 
         mainPanel.add(topPanel, BorderLayout.NORTH);			
         mainPanel.add(centerPanel, BorderLayout.CENTER);
