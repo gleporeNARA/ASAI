@@ -12,10 +12,15 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -38,10 +43,10 @@ import java.text.SimpleDateFormat;
 
 public class fileLister extends JFrame {
 
-	private JLabel label = new JLabel("[No directory selected]");
-	private Border border = BorderFactory.createTitledBorder("Directory Options");
-	private JCheckBox checkSubDir = new JCheckBox("Check Subdirectories");
-	private JCheckBox rowHeaders = new JCheckBox("Extract Row Headers");
+    private JLabel label = new JLabel("[No directory selected]");
+    private Border border = BorderFactory.createTitledBorder("Directory Options");
+    private JCheckBox checkSubDir = new JCheckBox("Check Subdirectories");
+    private JCheckBox rowHeaders = new JCheckBox("Extract Row Headers");
 	
     private JButton browse = new JButton("Browse...");
     private JButton cancel = new JButton("Cancel");
@@ -169,6 +174,9 @@ public class fileLister extends JFrame {
         		Reusing the same code from check sub directories for testing as of now
         	*/
             public void actionPerformed(ActionEvent ae) {
+	            // indeterminable progress bar
+		        current.setIndeterminate(true);
+            	
                 File directories = new File(selectedFile.toString());
                 //String[] extensions = { "csv", " xls", "xlsx", "ods" };
                 
@@ -184,6 +192,19 @@ public class fileLister extends JFrame {
                   displayFileName = file.getName();
                   //System.out.println("Found File: " + file.getName());
                   area.append("Currently processing file " + displayFileName + " ...\n\n");
+                  
+                  // Paths - Getting the sub directories
+                  
+/*                  String[] names = selectedFile.list();
+
+                  for(String name : names)
+                  {
+                      if (selectedFile.isDirectory())
+                      {
+                          System.out.println(name);
+                      }
+                  }*/
+                  
                   
                   // Test for getting the file extension
                   String fileExtension=" ";
@@ -204,26 +225,70 @@ public class fileLister extends JFrame {
                   // Object for formatting the date
                   SimpleDateFormat date = new SimpleDateFormat("YYYY-MM-dd");
                   
+                  // Most used term
+      			StringBuilder str = new StringBuilder();
+    			
+    			BufferedReader in = new BufferedReader(new FileReader(file));
+    			String inputLine;
+    	
+    			while ((inputLine = in.readLine()) != null)
+    			{
+    				// Appends the whole string together and adds 
+    				// a comma, needed for splitting for csv files
+    				str.append(inputLine + ",");
+    			}
+    			
+    			String completeString = str.toString();
+    			   
+    			in.close();
+    			    
+    			Map<String, Integer> map = new HashMap<String,Integer>();				// Map to store the keys and values	
+    			ValueComparator bvc =  new ValueComparator(map);						// Compares the values against each other
+    			TreeMap<String,Integer> sorted_map = new TreeMap<String,Integer>(bvc);	// TreeMap sorts the keys in alphabetic order
+    			
+    			// Splits certain characters except for a period 
+    			String[] words = completeString.split("[^.\\w]");
+    			for (int i = 0; i < words.length; i++) {
+    				// Replaces all of the numeric characters in order 
+    				// for words to only appear on the list
+    				String key = words[i].replaceAll("[^A-Za-z]", "");	
+    				if (key.length() > 0) {
+    					if (!map.containsKey(key)) {
+    						map.put(key, 1);
+    				        }
+    				    else {
+    				    	int value = map.get(key);
+    				        map.put(key, ++value);
+    				    }
+    				}
+    			}
+
+    			sorted_map.putAll(map);
+    			List<Map.Entry<String, Integer>> entryList = new ArrayList<Map.Entry<String, Integer>>(sorted_map.entrySet());
+    			String list = null;
+    			for (Map.Entry<String, Integer> entry : entryList.subList(0, 10)) {
+    			    list = entry.getKey();
+    			    
+    			    // Prints out the top ten terms
+    			    // System.out.println(list);
+    			}
                   /*
-                   * Note: Gets the date for last modified for now
+                   *  Minor bugs:
+                   *  - paths currently does not have an array of sub directories
+                   *  - date created column gets the last modified date
+                   *  - IndexOutOfBoundsException for the ArrayList entryList for the top 10 terms,
+                   *    however, it displays the top ten terms in the table
                    */
-                  
-                  model.insertRow(0, new Object[] { file.getAbsolutePath(), displayFileName, fileExtension, " ", " ", count, " ", 
-                		  date.format(file.lastModified()), file.length() });
-                  //model.insertRow(1, new Object[] { "Tests" });
+                  model.insertRow(0, new Object[] { selectedFile, displayFileName, fileExtension, " ", " ", count, " ", 
+                		  date.format(file.lastModified()), file.length(), entryList.subList(0, 10) });
                 }
-                
-                // Test for inserting into the model table
                 
                } catch (Exception e) {
             	   e.printStackTrace();
                }
-               
-	            // indeterminable progress bar
-		        current.setIndeterminate(true);
             }
         });
-
+        
         JPanel pane = new JPanel();
         pane.add(current);  
         
@@ -237,7 +302,24 @@ public class fileLister extends JFrame {
         mainPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 10, 10));
         add(mainPanel);
     }
-    
+   
+    // ValueComparator class in order to compare each term in the top 10 most used terms
+    class ValueComparator implements Comparator<String> {
+
+        Map<String, Integer> base;
+        public ValueComparator(Map<String, Integer> base) {
+            this.base = base;
+        }
+
+        // Compares the values of the values within the TreeMap
+        public int compare(String a, String b) {
+            if (base.get(a) >= base.get(b)) {
+                return -1;
+            } else {
+                return 1;
+            } 
+        }
+    }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
