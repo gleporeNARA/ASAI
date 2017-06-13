@@ -1,7 +1,7 @@
 # ASAI
-Analyzing Spreadsheets with Artificial Intelligence
+Analyzing Stuff with Artificial Intelligence
 
-This program will work with spreadsheet and database formats. The program will be written in Java and will analyze all spreadsheet files (xls, xlsx, ods, csv, and a few other formats) in a collection. The program will use metadata such as the title of the file, the names of spreadsheet tabs, the length of the file, and an analysis of the file's contents to produce a report for the user. The report will be in HTML format, which will allow us to create various dynamic images which illustrate connections between files and clusters of content.
+This program will work with various electronic file formats. The program will be written in Java and will analyze various file formats, including office documents, emails, spreadsheets and other files in a collection. The program will use metadata such as the title of the file, the names of spreadsheet tabs, the length of the file, and an analysis of the file's contents to produce a report for the user. The report will be in HTML format, which will allow us to create various dynamic images which illustrate connections between files and clusters of content.
 
 Tools that will be used for this project include:
 
