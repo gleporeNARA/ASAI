@@ -71,7 +71,7 @@ public class fileLister extends JFrame {
     
     public fileLister() {
 
-        super("File Lister 1.0");
+        super("ASAI - .4");
         
         setExtendedState(JFrame.MAXIMIZED_BOTH); 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
