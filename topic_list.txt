@@ -1,5 +1,5 @@
 Accidents|mishap|misadventure|mischance|happening|occurrence|occurrent|natural event 
-Accountants|businessperson|bourgeois 
+Accountants|businessperson 
 Accounting|explanation|account|system|system of rules|occupation|business|job|line of work|line|register|statement|financial statement 
 Additives|addition|add-on|improver 
 Adhesives|material|stuff 
